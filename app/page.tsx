@@ -1,12 +1,17 @@
-import Link from "next/link";
+"use client";
+import React from "react";
+import { Button, Flex } from "antd";
 
 export default function Home() {
   return (
     <div>
       <h1> Dashboard Main</h1>
-      <Link href="/auth">Login Pages</Link>
-      <br></br>
-      <Link href="/dashboard">dashboard Pages</Link>
+      <Flex gap="small" wrap>
+        <Button href="/dashboard">Dashboard Page</Button>
+        <Button type="primary" href="/auth">
+          Login Page
+        </Button>
+      </Flex>
     </div>
   );
 }
